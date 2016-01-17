@@ -1,20 +1,4 @@
 #!/bin/bash
-#
-# zabbix-check.sh                                       ver.1.0.0  2016.01.17
-#
-# Author:
-#     hogehoge hogehoge
-#
-# Usage:
-#     zabbix-check.sh
-#
-# Description :
-#     This script checks zabbix-items-status.
-# 
-# Caution:
-#     You must make $MASTER,$SQL before this script executes.
-#
-#########################################################################
 
 ### Variable
 MASTER=/root/Tools/etc/master
