@@ -14,13 +14,13 @@ SUBJECT=Zabbix-Check
 mysql -uroot -phogehoge zabbix < ${SQL} > ${TRAN}
 
 ### diff
-diff ${MASTER} ${TRAN}
+diff ${MASTER} ${TRAN} > ${LOGS}
 
 if [ $? = 0 ]; then
-    echo "${DATE} zabbix-check OK" > ${LOGS}
-    echo "zabbix-check OK" | mail -s ${SUBJECT} -r ${MAIL_FROM} ${MAIL_TO}
+    echo "${DATE} zabbix-check OK" >> ${LOGS}
+    cat ${LOGS} | mail -s ${SUBJECT} -r ${MAIL_FROM} ${MAIL_TO}
 
 else
-    echo "${DATE} zabbix-check error" > ${LOGS}
-    echo "zabbix-check error" | mail -s ${SUBJECT} -r ${MAIL_FROM} ${MAIL_TO}
+    echo "${DATE} zabbix-check error" >> ${LOGS}
+    cat ${LOGS} | mail -s ${SUBJECT} -r ${MAIL_FROM} ${MAIL_TO}
 fi

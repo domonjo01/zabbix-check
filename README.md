@@ -21,4 +21,6 @@
 #         First Commit.
 #     1.0.1
 #         The comments of zabbix-check.sh moves "README.md".
+#     1.0.2
+#         The result of diff adds.
 #
