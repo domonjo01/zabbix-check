@@ -1,0 +1,2 @@
+itemid	hostid	host	name	key_	host_status	available	error
+23660	10084	Zabbix server	ログ監視[messages]	log[/var/log/messages,error]	0	1	ZBX_NOTSUPPORTED

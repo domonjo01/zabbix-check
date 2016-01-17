@@ -1,0 +1,1 @@
+select items.itemid,items.hostid,hosts.host,items.name,items.key_,items.status as host_status,hosts.available,items.error from items INNER JOIN hosts ON items.hostid = hosts.hostid where hosts.status = 0 and hosts.available = 1 and items.status = 0 and items.error != "";
